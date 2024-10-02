@@ -1,0 +1,29 @@
+:root {
+  /* colors */
+  --white: #fdfdfd;
+  --extra-light-gray: #f4f4f4;
+  --light-gray: #dadada;
+  --gray: #9c9c9c;
+  --dark-gray: #595959;
+  --black: #161616;
+  --accent: #22a0bc;
+
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size-s: 10px;
+    --font-size-m: 14px;
+    --font-size-l: 16px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 24px;
+  }
+}
