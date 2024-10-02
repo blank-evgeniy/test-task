@@ -1,0 +1,72 @@
+.user_card {
+  border-radius: 16px;
+  padding: 24px;
+
+  display: flex;
+  gap: 20px;
+
+  background-color: var(--white);
+}
+
+.photo {
+  height: 120px;
+  width: 70.6%;
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.username {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--accent);
+
+  margin-bottom: 4px;
+}
+
+.company_name {
+  color: var(--dark-gray);
+}
+
+.city {
+  margin-top: auto;
+  color: var(--gray);
+  font-size: var(--font-size-s);
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.dropdown_content {
+  min-width: 200px;
+
+  padding: 16px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+
+/* стили для архивированных карточек */
+
+.card_disable .photo {
+  filter: grayscale(100%);
+}
+
+.card_disable .username {
+  color: var(--dark-gray);
+}

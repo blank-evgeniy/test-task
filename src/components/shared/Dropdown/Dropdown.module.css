@@ -1,10 +1,9 @@
-.container {
-  position: relative;
-  display: inline;
-}
-
 .dropdown {
   position: absolute;
+
+  background-color: var(--white);
+  box-shadow: 0px 0px 2px 0px #5a5a5a;
+
   z-index: 10;
 
   border-radius: 12px;

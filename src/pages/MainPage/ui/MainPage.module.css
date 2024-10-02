@@ -1,0 +1,31 @@
+.page {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--extra-light-gray);
+}
+
+.container {
+  max-width: 1128px;
+  width: 100%;
+
+  padding: 40px 16px;
+
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: 32px;
+
+  padding-bottom: 16px;
+  border-bottom: solid 1px var(--light-gray);
+}
+
+.cards_list {
+  margin-top: 28px;
+  margin-bottom: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px 40px;
+}

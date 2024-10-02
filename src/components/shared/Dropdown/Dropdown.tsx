@@ -27,16 +27,11 @@ const Dropdown = ({
   };
 
   return (
-    <div ref={ref} className={styles.container}>
+    <div ref={ref} className={classNames(styles.container, {}, [className])}>
       <button onClick={handleOpen} className={styles.button}>
         {button}
       </button>
-
-      {!!opened && (
-        <div className={classNames(styles.dropdown, {}, [className])}>
-          {children}
-        </div>
-      )}
+      {!!opened && <div className={styles.dropdown}>{children}</div>}
     </div>
   );
 };
