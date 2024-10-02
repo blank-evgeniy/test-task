@@ -1,17 +1,11 @@
 import "./App.css";
-import Button from "./components/shared/Button/Button";
-import Category from "./components/shared/Category/Category";
-import Dropdown from "./components/shared/Dropdown/Dropdown";
-import TextField from "./components/shared/TextField/TextField";
+import AppRouter from "./app/router/AppRouter";
 
 function App() {
   return (
     <>
-      Привет мир
-      <Button>Button</Button>
-      <Category>Name</Category>
-      <TextField heading="Heading" placeholder="Information" id="info" />
-      <Dropdown>asdasd</Dropdown>
+      <div>Header</div>
+      <AppRouter />
     </>
   );
 }
