@@ -1,0 +1,32 @@
+.heading {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input {
+  max-width: 420px;
+  position: relative;
+
+  margin-top: 10px;
+
+  row-gap: 8px;
+  padding: 10px 16px;
+  padding-right: 40px;
+
+  border-radius: 50px;
+  border: solid 2px var(--light-gray);
+}
+
+.field {
+  width: 100%;
+}
+
+.cross {
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}

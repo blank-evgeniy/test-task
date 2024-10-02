@@ -1,0 +1,4 @@
+.category {
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--light-gray);
+}

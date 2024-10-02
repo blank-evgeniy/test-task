@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  display: inline;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 10;
+
+  border-radius: 12px;
+  padding: 8px;
+}
