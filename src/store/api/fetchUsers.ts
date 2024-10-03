@@ -2,6 +2,8 @@ import { User, UserData } from "@/types/User";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+import Photo from "@/assets/images/profile_photo.jpg";
+
 type fetchUsersProps = number;
 
 export const fetchUsers = createAsyncThunk<
@@ -28,7 +30,7 @@ export const fetchUsers = createAsyncThunk<
         username: user.username,
         company: user.company.name,
         city: user.address.city,
-        image: "", //с сервера не приходит изображение и информация об архивации, поэто тут захардкожено
+        image: Photo, //с сервера не приходит изображение и информация об архивации, поэтому тут захардкожено
         archived: false,
       };
     });

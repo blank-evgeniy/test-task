@@ -3,6 +3,7 @@ import styles from "./UserCard.module.css";
 import Dropdown from "@/components/shared/Dropdown/Dropdown";
 import { User } from "@/types/User";
 import UserMenu from "../UserMenu/UserMenu";
+import { truncate } from "@/lib/truncate";
 
 interface UserCardProps {
   className?: string;
@@ -22,8 +23,8 @@ const UserCard = ({ className, user, disable = false }: UserCardProps) => {
       <img src={user.image} className={styles.photo} />
       <div className={styles.content}>
         <div className={styles.content_block}>
-          <p className={styles.username}>{user.username}</p>
-          <p className={styles.company_name}>{user.company}</p>
+          <p className={styles.username}>{truncate(user.username, 11)}</p>
+          <p className={styles.company_name}>{truncate(user.company, 15)}</p>
         </div>
 
         <p className={styles.city}>{user.city}</p>

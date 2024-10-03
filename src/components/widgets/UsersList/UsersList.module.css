@@ -1,0 +1,10 @@
+.loading {
+  position: relative;
+  min-height: 140px;
+}
+
+.error {
+  padding: 16px;
+  font-size: var(--font-size-xl);
+  text-align: center;
+}

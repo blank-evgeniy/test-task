@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import { selectUsers } from "@/store/selectors/selectUsers";
 import { selectUsersLoading } from "@/store/selectors/selectUsersLoading";
 import { selectUsersError } from "@/store/selectors/selectUsersError";
+import Loader from "@/components/shared/Loader/Loader";
+import styles from "./UsersList.module.css";
 
 interface UsersListProps {
   className?: string;
@@ -28,11 +30,15 @@ const UsersList = ({ className, archived = false }: UsersListProps) => {
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className={styles.loading}>
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <div className={styles.error}>{error}</div>;
   }
 
   //удаление скрытых пользователей и проверка поля архивации согласно пропсу компонента
