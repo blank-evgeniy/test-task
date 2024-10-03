@@ -1,16 +1,43 @@
-import { User } from "@/types/User";
 import UserCard from "../UserCard/UserCard";
+import { useEffect } from "react";
+import { useAppDispatch } from "@/store/store";
+import { fetchUsers } from "@/store/api/fetchUsers";
+import { useSelector } from "react-redux";
+import { selectUsers } from "@/store/selectors/selectUsers";
+import { selectUsersLoading } from "@/store/selectors/selectUsersLoading";
+import { selectUsersError } from "@/store/selectors/selectUsersError";
 
 interface UsersListProps {
   className?: string;
   archived?: boolean;
-  users: User[];
 }
 
-const UsersList = ({ className, archived = false, users }: UsersListProps) => {
+const USERS_LIMIT = 6;
+
+const UsersList = ({ className, archived = false }: UsersListProps) => {
+  const dispatch = useAppDispatch();
+
+  const users = useSelector(selectUsers);
+  const loading = useSelector(selectUsersLoading);
+  const error = useSelector(selectUsersError);
+
+  useEffect(() => {
+    dispatch(fetchUsers(USERS_LIMIT));
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  const filteredUsers = users.filter((user) => user.archived === archived);
+
   return (
     <div className={className}>
-      {users.map((user) => (
+      {filteredUsers.map((user) => (
         <UserCard user={user} key={user.id} disable={archived} />
       ))}
     </div>
