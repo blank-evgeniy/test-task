@@ -24,3 +24,9 @@
 .button {
   align-self: self-start;
 }
+
+.message {
+  color: rgb(190, 56, 56);
+  padding-top: 12px;
+  padding-bottom: 4px;
+}

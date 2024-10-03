@@ -1,14 +1,14 @@
 import { classNames } from "@/lib/classNames";
 import styles from "./TextField.module.css";
 import { CrossIcon } from "@/assets/icons";
-import { useState } from "react";
 
 interface TextFieldProps {
   className?: string;
   heading: string;
   placeholder: string;
   id: string;
-  initialValue?: string;
+  value?: string;
+  onClear?: () => void;
   onChange?: (value: string) => void;
 }
 
@@ -17,20 +17,10 @@ const TextField = ({
   heading,
   placeholder,
   id,
-  initialValue,
+  value,
+  onClear,
   onChange,
 }: TextFieldProps) => {
-  const [value, setValue] = useState(initialValue || "");
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-    if (onChange) onChange(event.target.value);
-  };
-
-  const handleClear = () => {
-    setValue("");
-  };
-
   return (
     <div className={classNames(styles.text_field, {}, [className])}>
       <label className={styles.heading} htmlFor={id}>
@@ -41,11 +31,13 @@ const TextField = ({
           className={styles.field}
           placeholder={placeholder}
           id={id}
-          onChange={handleChange}
+          onChange={(e) => {
+            if (onChange) onChange(e.target.value);
+          }}
           value={value}
         />
         {value && (
-          <button className={styles.cross} onClick={handleClear}>
+          <button className={styles.cross} onClick={onClear}>
             <CrossIcon />
           </button>
         )}

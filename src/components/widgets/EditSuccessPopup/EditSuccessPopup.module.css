@@ -1,0 +1,22 @@
+.popup {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: var(--dark-gray);
+}
+
+.cross {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.message {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
