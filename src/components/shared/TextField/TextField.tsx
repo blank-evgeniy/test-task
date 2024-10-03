@@ -8,6 +8,7 @@ interface TextFieldProps {
   heading: string;
   placeholder: string;
   id: string;
+  initialValue?: string;
   onChange?: (value: string) => void;
 }
 
@@ -16,9 +17,10 @@ const TextField = ({
   heading,
   placeholder,
   id,
+  initialValue,
   onChange,
 }: TextFieldProps) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(initialValue || "");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);

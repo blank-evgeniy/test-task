@@ -10,10 +10,12 @@
 
 .photo {
   height: 120px;
-  width: 70.6%;
+  width: 130px;
   object-fit: cover;
 
   border-radius: 8px;
+
+  flex-shrink: 0;
 }
 
 .content {

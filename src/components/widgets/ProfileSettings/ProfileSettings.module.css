@@ -1,0 +1,26 @@
+.profile_settings {
+  background-color: var(--white);
+
+  border-radius: 16px;
+  padding: 40px;
+
+  flex-shrink: 0;
+}
+
+.photo {
+  width: 280px;
+  height: 485px;
+  object-fit: cover;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+  margin-top: 40px;
+
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--light-gray);
+}
+
+.category {
+  margin-top: 24px;
+}

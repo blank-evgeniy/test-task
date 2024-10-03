@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import usersReducer from "./reducers/userSlice";
+import usersReducer from "./reducers/usersSlice";
 import { useDispatch } from "react-redux";
 import { StateSchema } from "@/types/store";
 

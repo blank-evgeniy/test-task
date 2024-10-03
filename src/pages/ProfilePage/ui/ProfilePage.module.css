@@ -1,0 +1,33 @@
+.page {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--extra-light-gray);
+}
+
+.container {
+  max-width: 1128px;
+  width: 100%;
+
+  padding: 0 16px;
+  padding-bottom: 20px;
+
+  margin: 0 auto;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 20.5px 0;
+
+  color: var(--dark-gray) !important;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.profile {
+  display: flex;
+  gap: 40px;
+
+  margin-top: 24px;
+}

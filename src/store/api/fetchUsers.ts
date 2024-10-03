@@ -27,7 +27,10 @@ export const fetchUsers = createAsyncThunk<
     const usersData: User[] = fetchedData.map((user) => {
       return {
         id: user.id,
+        name: user.name,
         username: user.username,
+        mail: user.email,
+        phone: user.phone,
         company: user.company.name,
         city: user.address.city,
         image: Photo, //с сервера не приходит изображение и информация об архивации, поэтому тут захардкожено

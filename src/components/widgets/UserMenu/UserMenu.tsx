@@ -1,6 +1,6 @@
 import { classNames } from "@/lib/classNames";
 import { useAppDispatch } from "@/store/store";
-import { usersActions } from "@/store/reducers/userSlice";
+import { usersActions } from "@/store/reducers/usersSlice";
 import styles from "./UserMenu.module.css";
 import { Link } from "react-router-dom";
 

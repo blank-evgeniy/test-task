@@ -15,7 +15,7 @@ interface UsersListProps {
 }
 
 //максимальное количество пользователей получаемых с сервера
-const USERS_LIMIT = 6;
+export const USERS_LIMIT = 6;
 
 //компонент отвечающий за вывод архивированных и активных пользователей
 const UsersList = ({ className, archived = false }: UsersListProps) => {
@@ -26,8 +26,10 @@ const UsersList = ({ className, archived = false }: UsersListProps) => {
   const error = useSelector(selectUsersError);
 
   useEffect(() => {
-    dispatch(fetchUsers(USERS_LIMIT));
-  }, [dispatch]);
+    if (users.length === 0) {
+      dispatch(fetchUsers(USERS_LIMIT));
+    }
+  }, [dispatch, users]);
 
   if (loading) {
     return (

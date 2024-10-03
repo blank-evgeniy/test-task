@@ -24,7 +24,7 @@ const UserCard = ({ className, user, disable = false }: UserCardProps) => {
       <div className={styles.content}>
         <div className={styles.content_block}>
           <p className={styles.username}>{truncate(user.username, 11)}</p>
-          <p className={styles.company_name}>{truncate(user.company, 15)}</p>
+          <p className={styles.company_name}>{truncate(user.company, 13)}</p>
         </div>
 
         <p className={styles.city}>{user.city}</p>

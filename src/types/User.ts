@@ -1,7 +1,10 @@
 export interface User {
   id: number;
   image: string;
+  name: string;
   username: string;
+  mail: string;
+  phone: string;
   company: string;
   city: string;
   archived?: boolean;

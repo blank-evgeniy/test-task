@@ -1,3 +1,6 @@
+//Компонент с основными иконками сайта
+//Также возможен подход с svgr loader'ом, но мне этот нравится больше
+
 export const CrossIcon = () => (
   <svg
     width="24"
@@ -82,14 +85,14 @@ export const BackarrowIcon = () => (
   >
     <path
       d="M11.25 12H0.75"
-      stroke="#161616"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M6 17.25L0.75 12L6 6.75"
-      stroke="#161616"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"

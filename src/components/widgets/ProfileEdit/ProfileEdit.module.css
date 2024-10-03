@@ -1,0 +1,26 @@
+.profile_edit {
+  background-color: var(--white);
+
+  border-radius: 16px;
+  padding: 40px;
+
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--light-gray);
+}
+
+.button {
+  align-self: self-start;
+}
