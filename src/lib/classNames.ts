@@ -1,5 +1,6 @@
 type Mode = Record<string, string | boolean>;
 
+//функция для удобного слияния нескольких css классов
 export const classNames = (
   cls: string,
   mods: Mode = {},

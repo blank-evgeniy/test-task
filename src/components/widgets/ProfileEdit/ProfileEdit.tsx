@@ -1,5 +1,4 @@
 import { classNames } from "@/lib/classNames";
-import styles from "./ProfileEdit.module.css";
 import { User } from "@/types/User";
 import TextField from "@/components/shared/TextField/TextField";
 import Button from "@/components/shared/Button/Button";
@@ -7,6 +6,8 @@ import { useState } from "react";
 import { useAppDispatch } from "@/store/store";
 import { usersActions } from "@/store/reducers/usersSlice";
 import EditSuccessPopup from "../EditSuccessPopup/EditSuccessPopup";
+
+import styles from "./ProfileEdit.module.css";
 
 interface ProfileEditProps {
   className?: string;
@@ -22,6 +23,7 @@ interface NewUserData {
   company: string;
 }
 
+//Форма с простой валидацией и попапом
 const ProfileEdit = ({ className, user }: ProfileEditProps) => {
   const dispatch = useAppDispatch();
 

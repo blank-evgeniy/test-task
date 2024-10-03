@@ -1,13 +1,15 @@
 import { CrossIcon } from "@/assets/icons";
-import styles from "./EditSuccessPopup.module.css";
 import Popup from "@/components/shared/Popup/Popup";
 import SuccessImage from "@/assets/images/ok.png";
+
+import styles from "./EditSuccessPopup.module.css";
 
 interface EditSuccessPopupProps {
   onClose: () => void;
   active: boolean;
 }
 
+//Попап для успешного обновления данных профиля
 const EditSuccessPopup = ({ active, onClose }: EditSuccessPopupProps) => {
   return (
     <Popup active={active} onClose={onClose} className={styles.popup}>

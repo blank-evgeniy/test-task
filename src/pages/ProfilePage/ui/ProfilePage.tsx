@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import styles from "./ProfilePage.module.css";
 import { BackarrowIcon } from "@/assets/icons";
 import { useSelector } from "react-redux";
 import { selectUserById } from "@/store/selectors/selectUsers";
@@ -12,6 +11,8 @@ import Loader from "@/components/shared/Loader/Loader";
 import { USERS_LIMIT } from "@/components/widgets/UsersList/UsersList";
 import ProfileSettings from "@/components/widgets/ProfileSettings/ProfileSettings";
 import ProfileEdit from "@/components/widgets/ProfileEdit/ProfileEdit";
+
+import styles from "./ProfilePage.module.css";
 
 type Params = "id";
 

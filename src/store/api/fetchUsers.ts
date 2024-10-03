@@ -6,6 +6,7 @@ import Photo from "@/assets/images/profile_photo.jpg";
 
 type fetchUsersProps = number;
 
+//thunc для получения пользователей с сервера
 export const fetchUsers = createAsyncThunk<
   User[],
   fetchUsersProps,

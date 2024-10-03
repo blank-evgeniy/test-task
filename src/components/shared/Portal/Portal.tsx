@@ -5,6 +5,7 @@ interface PortalProps {
   children: React.ReactNode;
 }
 
+//Компонент для телепорта компонента ( по умолчанию в body)
 const Portal: React.FC<PortalProps> = ({
   children,
   container = document.body,

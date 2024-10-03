@@ -1,5 +1,5 @@
-import styles from "./MainPage.module.css";
 import UsersList from "@/components/widgets/UsersList/UsersList";
+import styles from "./MainPage.module.css";
 
 const MainPage = () => {
   return (

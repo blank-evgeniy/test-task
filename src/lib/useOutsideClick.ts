@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+//хук, отслеживающий нажатие вне компонента на который прикреплен ref
 export const useOutsideClick = (callback: () => void) => {
   const ref = useRef<HTMLDivElement>(null);
 

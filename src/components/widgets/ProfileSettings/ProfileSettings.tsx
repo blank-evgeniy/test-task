@@ -1,6 +1,6 @@
 import { classNames } from "@/lib/classNames";
-import styles from "./ProfileSettings.module.css";
 import Category from "@/components/shared/Category/Category";
+import styles from "./ProfileSettings.module.css";
 
 interface ProfileSettingsProps {
   className?: string;

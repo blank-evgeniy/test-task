@@ -11,6 +11,7 @@ export interface User {
   hidden?: boolean;
 }
 
+//store
 export interface UsersSchema {
   users: User[];
   loading: boolean;

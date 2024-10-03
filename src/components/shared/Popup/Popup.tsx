@@ -1,7 +1,8 @@
 import { classNames } from "@/lib/classNames";
-import styles from "./Popup.module.css";
 import Portal from "../Portal/Portal";
 import { useEffect } from "react";
+
+import styles from "./Popup.module.css";
 
 interface PopupProps {
   className?: string;

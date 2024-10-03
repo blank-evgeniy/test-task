@@ -1,8 +1,8 @@
 import { classNames } from "@/lib/classNames";
-import styles from "./Dropdown.module.css";
 import { useOutsideClick } from "@/lib/useOutsideClick";
 import { useState } from "react";
 import { MenuIcon } from "@/assets/icons";
+import styles from "./Dropdown.module.css";
 
 interface DropdownProps {
   className?: string;

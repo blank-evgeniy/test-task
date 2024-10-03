@@ -1,9 +1,10 @@
 import { classNames } from "@/lib/classNames";
-import styles from "./UserCard.module.css";
 import Dropdown from "@/components/shared/Dropdown/Dropdown";
 import { User } from "@/types/User";
 import UserMenu from "../UserMenu/UserMenu";
 import { truncate } from "@/lib/truncate";
+
+import styles from "./UserCard.module.css";
 
 interface UserCardProps {
   className?: string;

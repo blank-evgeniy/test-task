@@ -1,8 +1,9 @@
 import { classNames } from "@/lib/classNames";
 import ProfileImage from "@/assets/images/profile_photo.jpg";
 import { Link } from "react-router-dom";
-import styles from "./Navigation.module.css";
 import { FavoriteIcon, NotificationIcon } from "@/assets/icons";
+
+import styles from "./Navigation.module.css";
 
 interface NavigationProps {
   className?: string;

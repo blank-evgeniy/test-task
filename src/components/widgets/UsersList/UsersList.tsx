@@ -7,6 +7,7 @@ import { selectUsers } from "@/store/selectors/selectUsers";
 import { selectUsersLoading } from "@/store/selectors/selectUsersLoading";
 import { selectUsersError } from "@/store/selectors/selectUsersError";
 import Loader from "@/components/shared/Loader/Loader";
+
 import styles from "./UsersList.module.css";
 
 interface UsersListProps {
