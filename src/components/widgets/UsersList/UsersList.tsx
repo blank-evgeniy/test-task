@@ -12,8 +12,10 @@ interface UsersListProps {
   archived?: boolean;
 }
 
+//максимальное количество пользователей получаемых с сервера
 const USERS_LIMIT = 6;
 
+//компонент отвечающий за вывод архивированных и активных пользователей
 const UsersList = ({ className, archived = false }: UsersListProps) => {
   const dispatch = useAppDispatch();
 
@@ -33,7 +35,10 @@ const UsersList = ({ className, archived = false }: UsersListProps) => {
     return <div>{error}</div>;
   }
 
-  const filteredUsers = users.filter((user) => user.archived === archived);
+  //удаление скрытых пользователей и проверка поля архивации согласно пропсу компонента
+  const filteredUsers = users.filter(
+    (user) => !user.hidden && user.archived === archived
+  );
 
   return (
     <div className={className}>

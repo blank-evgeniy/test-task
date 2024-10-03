@@ -1,0 +1,10 @@
+.user_menu {
+  min-width: 200px;
+
+  padding: 16px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}

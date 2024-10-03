@@ -2,7 +2,7 @@ import { classNames } from "@/lib/classNames";
 import styles from "./UserCard.module.css";
 import Dropdown from "@/components/shared/Dropdown/Dropdown";
 import { User } from "@/types/User";
-import { Link } from "react-router-dom";
+import UserMenu from "../UserMenu/UserMenu";
 
 interface UserCardProps {
   className?: string;
@@ -29,17 +29,7 @@ const UserCard = ({ className, user, disable = false }: UserCardProps) => {
         <p className={styles.city}>{user.city}</p>
 
         <Dropdown className={styles.dropdown}>
-          <div className={styles.dropdown_content}>
-            {disable ? (
-              <button>Активировать</button>
-            ) : (
-              <>
-                <Link to={`/profile/${user.id}`}>Редактировать</Link>
-                <button>Архивировать</button>
-                <button>Скрыть</button>
-              </>
-            )}
-          </div>
+          <UserMenu userId={user.id} archived={Boolean(user.archived)} />
         </Dropdown>
       </div>
     </div>

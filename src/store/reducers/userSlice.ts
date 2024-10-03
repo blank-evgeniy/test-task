@@ -13,7 +13,48 @@ const usersSlice = createSlice({
   name: "users",
   initialState,
 
-  reducers: {},
+  reducers: {
+    //занесение пользователся в архив
+    archiveUser(state, action: PayloadAction<number>) {
+      const userToUpdate = state.users.find(
+        (user) => user.id === action.payload
+      );
+
+      if (userToUpdate) {
+        userToUpdate.archived = true;
+      }
+    },
+    //Удаление пользователся из архива
+    unarchiveUser(state, action: PayloadAction<number>) {
+      const userToUpdate = state.users.find(
+        (user) => user.id === action.payload
+      );
+
+      if (userToUpdate) {
+        userToUpdate.archived = false;
+      }
+    },
+    //Скрыть пользователя
+    hideUser(state, action: PayloadAction<number>) {
+      const userToUpdate = state.users.find(
+        (user) => user.id === action.payload
+      );
+
+      if (userToUpdate) {
+        userToUpdate.hidden = true;
+      }
+    },
+    //Редактировать пользователя
+    editUser(state, action: PayloadAction<User>) {
+      const { id, ...newData } = action.payload;
+
+      const userToUpdate = state.users.find((user) => user.id === id);
+
+      if (userToUpdate) {
+        Object.assign(userToUpdate, newData);
+      }
+    },
+  },
 
   extraReducers: (builder) => {
     builder
@@ -32,4 +73,5 @@ const usersSlice = createSlice({
   },
 });
 
+export const { actions: usersActions } = usersSlice;
 export default usersSlice.reducer;
