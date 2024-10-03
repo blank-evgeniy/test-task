@@ -29,3 +29,36 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px 40px;
 }
+
+/* адаптивная верстка */
+@media screen and (max-width: 1120px) {
+  .cards_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards_list {
+    gap: 20px;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .cards_list {
+    margin-bottom: 32px;
+  }
+
+  .container {
+    padding-top: 32px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .cards_list {
+    grid-template-columns: 1fr;
+  }
+}

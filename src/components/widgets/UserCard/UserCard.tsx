@@ -23,11 +23,11 @@ const UserCard = ({ className, user, disable = false }: UserCardProps) => {
       <img src={user.image} className={styles.photo} />
       <div className={styles.content}>
         <div className={styles.content_block}>
-          <p className={styles.username}>{truncate(user.username, 11)}</p>
+          <p className={styles.username}>{truncate(user.username, 10)}</p>
           <p className={styles.company_name}>{truncate(user.company, 13)}</p>
         </div>
 
-        <p className={styles.city}>{user.city}</p>
+        <p className={styles.city}>{truncate(user.city, 18)}</p>
 
         <Dropdown className={styles.dropdown}>
           <UserMenu userId={user.id} archived={Boolean(user.archived)} />

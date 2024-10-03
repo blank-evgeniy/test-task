@@ -2,6 +2,7 @@ import { classNames } from "@/lib/classNames";
 
 import styles from "./Logo.module.css";
 import { LogoIcon } from "@/assets/icons";
+import { Link } from "react-router-dom";
 
 interface LogoProps {
   className?: string;
@@ -9,12 +10,12 @@ interface LogoProps {
 
 const Logo = ({ className }: LogoProps) => {
   return (
-    <div className={classNames(styles.logo, {}, [className])}>
+    <Link to="/" className={classNames(styles.logo, {}, [className])}>
       <LogoIcon />
       <div className={styles.name}>
         at-<span className={styles.bold}>work</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,6 +1,8 @@
 .dropdown {
   position: absolute;
 
+  right: calc(100% - 28px);
+
   background-color: var(--white);
   box-shadow: 0px 0px 2px 0px #5a5a5a;
 
@@ -8,4 +10,16 @@
 
   border-radius: 12px;
   padding: 8px;
+}
+
+.button {
+  color: var(--black);
+}
+
+.button:hover {
+  color: var(--accent);
+}
+
+.button:active {
+  color: var(--dark-gray);
 }

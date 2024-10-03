@@ -31,3 +31,12 @@
 
   margin-top: 24px;
 }
+
+/* адаптивная верстка */
+@media screen and (max-width: 920px) {
+  .profile {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 20px;
+  }
+}

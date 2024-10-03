@@ -80,7 +80,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="name"
           heading="Имя"
-          placeholder=""
+          placeholder="Введите имя"
           value={name}
           onChange={setName}
           onClear={() => setName("")}
@@ -88,7 +88,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="username"
           heading="Никнейм"
-          placeholder=""
+          placeholder="Введите никнейм"
           value={username}
           onChange={setUsername}
           onClear={() => setUsername("")}
@@ -96,7 +96,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="mail"
           heading="Почта"
-          placeholder=""
+          placeholder="Введите почту"
           value={mail}
           onChange={setMail}
           onClear={() => setMail("")}
@@ -104,7 +104,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="city"
           heading="Город"
-          placeholder=""
+          placeholder="Введите город"
           value={city}
           onChange={setCity}
           onClear={() => setCity("")}
@@ -112,7 +112,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="phone"
           heading="Телефон"
-          placeholder=""
+          placeholder="Введите номер телефона"
           value={phone}
           onChange={setPhone}
           onClear={() => setPhone("")}
@@ -120,7 +120,7 @@ const ProfileEdit = ({ className, user }: ProfileEditProps) => {
         <TextField
           id="company"
           heading="Название компании"
-          placeholder=""
+          placeholder="Введите название компании"
           value={company}
           onChange={setCompany}
           onClear={() => setCompany("")}

@@ -24,3 +24,26 @@
 .profile_name {
   font-size: var(--font-size-m);
 }
+
+.link {
+  color: var(--black);
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.link:active {
+  color: var(--dark-gray);
+}
+
+/* адаптивная верстка */
+@media screen and (max-width: 480px) {
+  .navmenu {
+    display: none;
+  }
+
+  .profile_name {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 import { classNames } from "@/lib/classNames";
 import ProfileImage from "@/assets/images/profile_photo.jpg";
-
+import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 import { FavoriteIcon, NotificationIcon } from "@/assets/icons";
 
@@ -12,8 +12,12 @@ const Navigation = ({ className }: NavigationProps) => {
   return (
     <nav className={classNames(styles.navigation, {}, [className])}>
       <div className={styles.navmenu}>
-        <FavoriteIcon />
-        <NotificationIcon />
+        <Link to="/favorite" className={styles.link}>
+          <FavoriteIcon />
+        </Link>
+        <Link to="/notification" className={styles.link}>
+          <NotificationIcon />
+        </Link>
       </div>
       <div className={styles.profile}>
         <img className={styles.profile_img} src={ProfileImage} />

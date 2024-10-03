@@ -30,3 +30,13 @@
   padding-top: 12px;
   padding-bottom: 4px;
 }
+
+@media screen and (max-width: 920px) {
+  .profile_edit {
+    padding: 28px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+}

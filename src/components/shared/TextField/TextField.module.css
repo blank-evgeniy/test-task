@@ -29,4 +29,13 @@
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
+  color: var(--black);
+}
+
+.cross:hover {
+  color: var(--accent);
+}
+
+.cross:active {
+  color: var(--dark-gray);
 }

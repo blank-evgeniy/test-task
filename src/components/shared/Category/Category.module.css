@@ -1,4 +1,17 @@
 .category {
   padding-bottom: 12px;
   border-bottom: solid 1px var(--light-gray);
+  color: var(--gray);
+
+  transition: color ease-in 100ms;
+
+  cursor: pointer;
+}
+
+.category:hover {
+  color: var(--accent);
+}
+
+.category:active {
+  color: var(--black);
 }

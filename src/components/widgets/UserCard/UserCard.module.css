@@ -76,3 +76,15 @@
 .card_disable .username {
   color: var(--dark-gray);
 }
+
+/* адаптивная верстка */
+@media screen and (max-width: 780px) {
+  .user_card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .city {
+    padding-top: 12px;
+  }
+}

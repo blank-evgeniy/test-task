@@ -4,4 +4,13 @@
 
   background-color: var(--black);
   color: var(--white);
+
+  transition-property: color, background-color;
+  transition-timing-function: ease-in;
+  transition-duration: 300ms;
+}
+
+.button:hover {
+  color: var(--black);
+  background-color: var(--light-gray);
 }
